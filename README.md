@@ -11,3 +11,4 @@
 ## Slides
 #### ★ Day 1 : [Work with Excel files in Python](https://iamshihshan.github.io/PyOlly_AutomateTutorial/Day1_Python_Deal_Excel.slides.html)
 #### ★ Day 2 : [Work with CSV files & JSON  in Python](https://iamshihshan.github.io/PyOlly_AutomateTutorial/Day2_Python_Deal_CSV&JSON.slides.html)
+#### ★ Day 3 : [Task Schedule](https://iamshihshan.github.io/PyOlly_AutomateTutorial/Day3_Python_Task_Schedule.slides.html)
