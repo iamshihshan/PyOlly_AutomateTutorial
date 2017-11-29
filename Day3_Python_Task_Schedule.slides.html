@@ -13142,7 +13142,7 @@ Cost time : 0.0009999275207519531
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fileObj</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;Docs\D3_01.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
@@ -13161,11 +13161,11 @@ Cost time : 0.0009999275207519531
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[86]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[6]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;subprocess.Popen at 0x4fefc88&gt;</pre>
+<pre>&lt;subprocess.Popen at 0x4b0ac50&gt;</pre>
 </div>
 
 </div>
@@ -13205,7 +13205,7 @@ Cost time : 0.0009999275207519531
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[96]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fileObj</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;Docs\D3_02.py&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
@@ -13223,11 +13223,11 @@ Cost time : 0.0009999275207519531
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[96]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[7]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;subprocess.Popen at 0x5018b00&gt;</pre>
+<pre>&lt;subprocess.Popen at 0x4b0a668&gt;</pre>
 </div>
 
 </div>
@@ -13266,7 +13266,7 @@ Cost time : 0.0009999275207519531
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[105]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">time</span><span class="o">,</span> <span class="nn">subprocess</span>
@@ -13294,11 +13294,11 @@ Cost time : 0.0009999275207519531
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[105]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[1]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;subprocess.Popen at 0x5020c18&gt;</pre>
+<pre>&lt;subprocess.Popen at 0x4b0a7b8&gt;</pre>
 </div>
 
 </div>
@@ -13321,11 +13321,14 @@ Cost time : 0.0009999275207519531
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Create-an-Task-for-Eyes-Rest-Notification">Create an Task for Eyes Rest Notification<a class="anchor-link" href="#Create-an-Task-for-Eyes-Rest-Notification">&#182;</a></h3><ol>
-<li>Choose Notification Picture You like</li>
-<li>Countfor the DateTime</li>
-<li>Open Picture with subprocess.Popen()</li>
+<h3 id="Create-a-Task-for-Out-of-office-Notification">Create a Task for Out-of-office Notification<a class="anchor-link" href="#Create-a-Task-for-Out-of-office-Notification">&#182;</a></h3><ol>
+<li>Choose notification <a href="Imgs/D3_08.GIF">picture</a> you like</li>
+<li>Count for the current DateTime</li>
+<li>Before the time you could get off, use time.sleep(1) and refresh the current time at the end of loop</li>
+<li>If times up, open picture with subprocess.Popen()</li>
 </ol>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span><span class="o">,</span> <span class="nn">datetime</span><span class="o">,</span> <span class="nn">subprocess</span>
+</pre></div>
 
 </div>
 </div>
@@ -13336,6 +13339,62 @@ Cost time : 0.0009999275207519531
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Answer">Answer<a class="anchor-link" href="#Answer">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">time</span><span class="o">,</span> <span class="nn">datetime</span><span class="o">,</span> <span class="nn">subprocess</span>
+
+<span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">now</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="n">now</span><span class="o">.</span><span class="n">minute</span><span class="o">!=</span><span class="mi">7</span><span class="p">:</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">now</span><span class="o">.</span><span class="n">minute</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;:&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">now</span><span class="o">.</span><span class="n">second</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&gt;&#39;</span><span class="p">)</span>
+    
+<span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">([</span><span class="s1">&#39;start&#39;</span><span class="p">,</span> <span class="s1">&#39;Imgs/D3_08.GIF&#39;</span><span class="p">],</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2017-11-30 00:06:52.985218
+6:53&gt;6:54&gt;6:55&gt;6:56&gt;6:57&gt;6:58&gt;6:59&gt;7:0&gt;</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[38]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;subprocess.Popen at 0x51bf9e8&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="Imgs/D3_08.GIF" height="200" width="250"></img></p>
+
 </div>
 </div>
 </div></section><section>
